@@ -24,3 +24,9 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+## 运行到真实设备上
+```bash
+ionic cordova run ios -lcs --device --verbose
+
+```
+

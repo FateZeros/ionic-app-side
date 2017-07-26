@@ -1,0 +1,52 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>注册</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="login-page">
+	<div class="logo">
+		<img src="assets/imgs/appicon.png" alt="Ionic Logo">
+	</div>
+
+	<form #signupForm="ngForm" novalidate>
+		<ion-list no-lines>
+			<ion-item>
+				<ion-label stacked color="primary">用户名</ion-label>
+				<ion-input name="username" type="text" required class="signup-input">
+				</ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label stacked color="primary">密码</ion-label>
+				<ion-input name="password" type="password" required class="signup-input">
+				</ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label stacked color="primary">确认密码</ion-label>
+				<ion-input name="password-again" type="password" required class="signup-input">
+				</ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label stacked color="primary">邮箱</ion-label>
+				<ion-input name="email" type="email" required class="signup-input">
+				</ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label stacked color="primary">手机号</ion-label>
+				<ion-input name="mobile" type="mobile" required class="signup-input">
+				</ion-input>
+			</ion-item>
+		</ion-list>
+
+		<div padding>
+			<button ion-button (click)="onSignup(signupForm)" type="submit" block>注册</button>
+		</div>
+	</form>
+</ion-content>

@@ -6,6 +6,7 @@ import { NavController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
+import { SignupPage } from '../signup/signup';
 
 @Component({
   selector: 'page-login',
@@ -31,5 +32,9 @@ export class LoginPage {
   		loader.dismiss();
   		this.navCtrl.push(HomePage);
   	}, 3000)	
+  }
+
+  onSignup() {
+    this.navCtrl.push(SignupPage);
   }
 }
