@@ -16,9 +16,19 @@
 		<ion-list no-lines>
 			<ion-item>
 				<ion-label stacked color="primary">用户名</ion-label>
-				<ion-input name="username" type="text" required class="signup-input">
+				<ion-input 
+					[(ngModel)]="signup.username" 
+					name="username" 
+					#username="ngModel" 
+					type="text" 
+					required 
+					class="signup-input"
+				>
 				</ion-input>
 			</ion-item>
+			<p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+				用户名必填
+			</p>
 
 			<ion-item>
 				<ion-label stacked color="primary">密码</ion-label>
