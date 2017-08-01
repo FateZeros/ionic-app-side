@@ -30,3 +30,8 @@ ionic cordova run ios -lcs --device --verbose
 
 ```
 
+## 
+```bash
+ionic  cordova resources
+```
+
